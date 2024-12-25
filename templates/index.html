@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kidney Stone Detection</title>
+    <style>
+      /* Global reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body and background */
+      body {
+        font-family: "Roboto", sans-serif;
+        background-image: url("https://img.freepik.com/premium-vector/abstract-hexagonal-molecular-structures-technology-background-science-style-medical-design-vector-illustration_41981-2690.jpg?w=2000");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+
+      /* Main container styling */
+      .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 2.5rem;
+        color: rgb(83, 167, 235);
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      /* Label styling */
+      label {
+        display: block;
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      /* File input styling */
+      input[type="file"] {
+        background-color: #fff;
+        border: 2px solid rgb(71, 184, 255);
+        padding: 15px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 1rem;
+        color: #555;
+        transition: 0.3s ease;
+      }
+
+      input[type="file"]:focus {
+        border-color: #ff4500;
+        outline: none;
+      }
+
+      /* Button styling */
+      button {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+        background-color: rgb(143, 196, 247);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        transition: 0.3s ease;
+        margin-top: 20px;
+      }
+
+      button:hover {
+        background-color: rgb(78, 160, 236);
+        transform: scale(1.02);
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          padding: 30px;
+          width: 80%;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        button {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kidney Stone Detection</h1>
+      <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="image">Upload X-ray of the kidney:</label>
+        <input type="file" name="image" accept="image/*" required /><br />
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

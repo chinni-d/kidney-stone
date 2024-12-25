@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <style>
+      /* Global reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body and background */
+      body {
+        font-family: "Roboto", sans-serif;
+        background-image: url("https://img.freepik.com/premium-vector/abstract-hexagonal-molecular-structures-technology-background-science-style-medical-design-vector-illustration_41981-2690.jpg?w=2000");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+
+      /* Main container styling */
+      .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 2.5rem;
+        color: rgb(83, 167, 235);
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      /* Result text styling */
+      .result {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      /* Prediction label text */
+      .prediction {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      /* Image styling */
+      img {
+        margin-top: 30px;
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Button for going back */
+      .back-btn {
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 1.2rem;
+        background-color: rgb(55, 149, 226);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 20px;
+        transition: 0.3s ease;
+      }
+
+      .back-btn:hover {
+        background-color: rgb(63, 167, 227);
+        transform: scale(1.05);
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          padding: 30px;
+          width: 80%;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .result {
+          font-size: 1.2rem;
+        }
+
+        img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .back-btn {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kidney Stone Detection - Prediction Result</h1>
+      <div class="result">
+        <p class="prediction">Prediction: {{ label }}</p>
+      </div>
+
+      <br />
+      <a href="/" class="back-btn">Go Back</a>
+    </div>
+  </body>
+</html>
